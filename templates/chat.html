@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aaram</title>
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js" integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <link rel="stylesheet" href="../static/css/chat_style.css">
+</head>
+<body>
+    <nav class="primary-navigation">
+        <div class="left-nav">
+          <div class="logo">
+            <img src="../static/images/logo.png" alt="logo" />
+          </div>
+        </div>
+        <div class="right-nav">
+          <div class="user-name hover-underline-animation">USER</div>
+          <div class="user-profile">U</div>
+        </div>
+  
+        <div class="secondary-navigation-cluster">
+          <button class="nav-btn" id="home-href">home</button>
+          <button class="nav-btn" id="chat-href">chat</button>
+          <button class="nav-btn" id="reels-href">reels</button>
+          <button class="nav-btn" id="consultancy-href">consultancy</button>
+        </div>
+      </nav>
+    <div class="main-content">
+        <div class="chat-rooms-nav" id="chat-rooms-nav">
+            <div class="chat-rooms-nav-heading"><h3>Types</h3></div>
+            <div class="type-room-nav-item" id="entp-rnav">entp</div>
+            <div class="type-room-nav-item" id="intp-rnav">intp</div>
+            <div class="type-room-nav-item" id="estp-rnav">estp</div>
+            <div class="type-room-nav-item" id="istp-rnav">istp</div>
+            <div class="type-room-nav-item" id="enfp-rnav">enfp</div>
+            <div class="type-room-nav-item" id="infp-rnav">infp</div>
+            <div class="type-room-nav-item" id="esfp-rnav">esfp</div>
+            <div class="type-room-nav-item" id="isfp-rnav">isfp</div>
+            <div class="type-room-nav-item" id="entj-rnav">entj</div>
+            <div class="type-room-nav-item" id="intj-rnav">intj</div>
+            <div class="type-room-nav-item" id="estj-rnav">estj</div>
+            <div class="type-room-nav-item" id="istj-rnav">istj</div>
+            <div class="type-room-nav-item" id="enfj-rnav">enfj</div>
+            <div class="type-room-nav-item" id="infj-rnav">infj</div>
+            <div class="type-room-nav-item" id="esfj-rnav">esfj</div>
+            <div class="type-room-nav-item" id="isfj-rnav">isfj</div>
+        </div>
+        <div class="chat-section">
+            <div class="chat-body" id="chat-body">
+
+                <!-- <div class="chat-item chat-content-other">
+                    <div class="chat-packet">
+                        <div class="sender-name">avinash2002a</div>
+                        <div class="message-content">hello brother, its avinash kumar jha, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates iure eligendi animi itaque laboriosam repellat facilis quo, doloremque ab esse qui nihil eum consequatur inventore quae omnis at dolor et.</div>
+                        <div class="time-stamp">13:40</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="chat-input">
+                <button id="leave-room">leave</button>
+                <input type="text" id="text-input" placeholder="enter text" spellcheck="false">
+                <button id="send-text">send</button>
+            </div>
+        </div>
+    </div>
+    <div class="hidden-data" style="display: none;">
+        <div id="personality-type">{{personalityType}}</div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../static/chat.js"></script>
+</html>

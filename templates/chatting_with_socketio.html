@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SocketIO Chat Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js" integrity="sha512-mYYywm42J54tKr/BCaSy5EveS5g7f9QlASu1eTpNw4MQ4A7dSTFkHpzJYnYnCwoj1km3q1mMaA/A8mJwGn/gVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div id="messages"></div>
+    <input id="message-input" type="text" />
+    <button id="send-button">Send</button>
+    <script>
+      // Connect to the SocketIO server
+      const socket = io.connect('http://localhost:5000');
+
+      // Join a hallway
+      socket.emit('join', {hallway: 'my_hallway'});
+
+      // Listen for incoming messages
+      socket.on('message', (data) => {
+        const {text, sender, time} = data;
+        const messageElement = document.createElement('div');
+        messageElement.innerText = `[${time}] ${sender}: ${text}`;
+        document.getElementById('messages').appendChild(messageElement);
+      });
+
+      // Send a message
+      document.getElementById('send-button').addEventListener('click', () => {
+        const message = document.getElementById('message-input').value;
+        socket.emit('message', {message});
+        document.getElementById('message-input').value = '';
+      });
+
+      // Leave the hallway when the user leaves the page
+      window.addEventListener('beforeunload', () => {
+        socket.emit('leave', {hallway: 'my_hallway'});
+      });
+    </script>
+  </body>
+</html>

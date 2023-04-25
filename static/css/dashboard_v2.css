@@ -1,0 +1,347 @@
+:root {
+  --dark-blue: #03045e;
+  --mid-blue: #0077b6;
+  --light-blue: #00b4d8;
+  --lightest-blue: #90e0ef;
+  --white-blue: #caf0f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-image: linear-gradient(
+    170deg,
+    var(--dark-blue),
+    var(--mid-blue),
+    var(--light-blue, var(--lightest-blue), var(--white-blue))
+  );
+}
+
+.nav-btn {
+  margin: 25px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.nav-btn:hover {
+  background: var(--light-blue);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.nav-btn:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.nav-btn::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.nav-btn:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.primary-navigation {
+  position: relative;
+  background:transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 80px;
+}
+
+.left-nav,
+.right-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.left-nav .logo {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(199, 239, 255);
+}
+
+.logo img {
+  width: 7em;
+  position: relative;
+  top: 20px;
+}
+
+.right-nav .user-name {
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: rgb(199, 239, 255);
+  color: black;
+  text-align: center;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white-blue);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.right-nav {
+  position: absolute;
+  right: 20px;
+}
+
+.right-nav .user-profile {
+  height: 30px;
+  width: 50px;
+  background-color: rgb(0, 127, 177);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: rgb(0, 169, 236);
+}
+
+.secondary-navigation-cluster {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div.main-content {
+  height: calc(100vh - 135px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  display: block;
+}
+.daily-feed-section {
+  height: 100%;
+  position: relative;
+  background-color: rgb(243, 251, 255);
+  max-width: 800px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background: transparent;
+}
+
+h1.feed-section-heading {
+  font-size: 25px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  color: rgb(2, 109, 151);
+  color: white;
+  letter-spacing: 3px;
+}
+
+div.feed-container {
+  width: 95%;
+  background-color: var(--light-blue);
+  margin: 10px 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+div.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+div.feed-header .sender-pfp {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  color: rgb(2, 109, 151);
+  font-size: 20px;
+}
+div.feed-header .sender-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+div.feed-header .personality-type {
+  font-size: 15px;
+  font-weight: 500;
+}
+div.feed-content {
+  background-color: var(--lightest-blue);
+  padding: 10px;
+  border-radius: 5px;
+  color: #000;
+}
+
+.secondary-navigation {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.secondary-navigation input {
+  width: 600px;
+  background: var(--white-blue);
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.secondary-navigation input:active,
+.secondary-navigation input:focus {
+  outline: none;
+}
+
+.secondary-navigation ::placeholder {
+  color: black;
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(2, 109, 151, 0.5);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, orange);
+}
+
+.like-it-not {
+  display: flex;
+  align-items: center;
+}
+
+.like-it-not button {
+  padding: 3px;
+  border-radius: 7px;
+  border: none;
+  padding: 5px 20px;
+}
+
+.like-it-not button:hover {
+  cursor: pointer;
+}
+
+.like-it-not button:active,
+.like-it-not button:focus {
+  background-color: blue;
+  color: white;
+}
+
+.can-relate {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.like-it-not p {
+  display: inline-block;
+}
+
+.send-feed-message {
+  border: none;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 1rem;
+  margin: 20px;
+  text-transform: uppercase;
+  font-family: "Hanken Grotesk";
+  letter-spacing: 2px;
+  background-color: var(--lightest-blue);
+}
+
+.send-feed-message:hover {
+  background: linear-gradient(90deg, #c23117 0%, #c2920f 57%);
+  color: white;
+  cursor: pointer;
+}

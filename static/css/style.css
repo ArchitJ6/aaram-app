@@ -1,0 +1,234 @@
+:root{
+  --white:#fff;
+  --blue:#0087ca;
+  --black:#000;
+  --light_blue:#00d4ff;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-image: linear-gradient(
+    170deg,
+    #4b8f7c,
+    #749f82,
+    #a8e890,
+    #cfff8d,
+    #f0f8ff
+  );
+  background-size: 400%;
+  animation-name: bg-animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+.main_div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 50vh;
+  border-radius: 20px;
+  margin: auto;
+  padding: 3%;
+  font-weight: 800;
+  border: 2px solid var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter:blur(3px); 
+}
+
+.signup_div{
+  overflow-y: scroll;
+}
+
+#login-form{
+  position: relative;
+}
+
+.form_h1 {
+  text-align: center;
+}
+
+label,
+button {
+  padding: 1%;
+  margin-top: 5%;
+  display: block;
+}
+
+.firstname_div,
+.lastname_div,
+.username_div,
+.email_div,
+.mobile-number_div,
+.dob_div,
+.password_div {
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.fa-solid {
+  padding: 4%;
+}
+
+input {
+  width: 80%;
+  border: none;
+  font-size: 18px;
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--blue);
+  width: 100%;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.signup {
+  padding: 5% 0 0;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  bottom: 10%;
+}
+
+.signup a:hover {
+  color: var(--blue);
+}
+
+.signup a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.forgot {
+  text-align: right;
+  display: inline;
+  position: absolute;
+  right: 0;
+}
+
+.forgot a:hover {
+  color: var(--light_blue);
+}
+
+.forgot a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.submit-btn, .submit-btn2 {
+  width: 100%;
+  margin: auto;
+  border-radius: 18px;
+  margin-top: 5%;
+  border: 0;
+  padding: 3%;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.submit-btn:hover, .submit-btn2:hover {
+  background: var(--blue);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 66, 121, 1) 57%,
+    rgba(0, 50, 36, 1) 100%
+  );
+  color: white;
+}
+
+.sign-in {
+  border: none;
+  background: transparent;
+  text-align: right;
+}
+
+.sign-in a:hover {
+  color: #0087ca;
+}
+
+.sign-in a {
+  text-decoration: none;
+  color: black;
+}
+
+.message {
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 768px) and (min-width: 550px) {
+  .main_div {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .main_div {
+    width: 70%;
+  }
+
+  input {
+    font-size: 15px;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgba(9, 66, 121, 1) 57%);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #0087ca);
+}
+/* End of Scrollbar */
+
+
+.unactive-form{
+  display: none;
+}

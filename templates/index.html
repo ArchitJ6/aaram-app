@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <script defer="" src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <div class="main_div login-toggler">
+    <form id="login-form">
+      <h1 class="form_h1">Login</h1>
+      <label for="email">Username or Email:</label>
+      <div class="username_div hover-underline-animation">
+        <i class="fa-solid fa-user "></i>
+        <input type="text" id="username" placeholder="Username or Email" name="username" required autocomplete="off" />
+      </div>
+      <label for="password">Password:</label>
+      <div class='password_div hover-underline-animation'>
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="password" name="password" placeholder="Password" required />
+      </div>
+      <div class="signup">
+        <p class="signup"><a href="#" onclick="signup_login_function('signup')">Sign Up</a></p>
+      </div>
+      <div class="forgot">
+        <p><a href="#">Forgot Password ?</a></p>
+      </div>
+      <button type="submit" class="submit-btn" id="submit-btn">Sign In</button>
+    </form>
+    <div class="message"></div>
+  </div>
+  </div>
+
+  <div class="main_div signup_div signup-toggler unactive-form">
+    <form id="signup-form" action="signup-form">
+      <h1 class="form_h1">Sign Up</h1>
+      <label for="">First Name </label>
+      <div class="firstname_div hover-underline-animation">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" name="" id="first_name" class="first_name" placeholder="First Name" required />
+      </div>
+      <label for="">Last Name </label>
+      <div class="lastname_div hover-underline-animation">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" name="" id="last_name" class="last_name" placeholder="Last Name" required />
+      </div>
+      <label for="username">Username</label>
+      <div class="username_div hover-underline-animation">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="username2" class="username2" placeholder="Username" name="username" required />
+      </div>
+      <label for="">Email </label>
+      <div class="email_div hover-underline-animation">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" name="" id="email_id" class="email_id" placeholder="Email ID" required />
+      </div>
+      <label for="">Mobile Number </label>
+      <div class="mobile-number_div hover-underline-animation">
+        <i class="fa-solid fa-mobile"></i>
+        <input type="tel" name="" id="mobile_number" class="mobile_number" placeholder="Mobile Number" required />
+      </div>
+      <label for="">Date of Birth </label>
+      <div class="dob_div hover-underline-animation">
+        <i class=" fa-solid fa-calendar-days"></i>
+        <input type="date" name="" id="dob" class="dob" placeholder="Date of Birth" required />
+      </div>
+      <label for="">Password </label>
+      <div class="password_div hover-underline-animation">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="" id="password2" class="password2" placeholder="Password" required />
+      </div>
+      <div class="sign-in">
+        <p onclick="signup_login_function('login')"><a href="#">Sign in</a></p>
+      </div>
+      <button class="submit-btn2" id="submit-btn2">Submit</button>
+    </form>
+    <div class="message message2"></div>
+  </div>
+
+  <script type="text/javascript" src="../static/script.js"></script>
+  <script>
+    function signup_login_function(form_name) {
+      var login=document.querySelector('.login-toggler');
+      var signup=document.querySelector('.signup-toggler');
+      if (form_name==='login') {
+        signup.classList.add('unactive-form');
+        login.classList.remove('unactive-form');
+      } else {
+        signup.classList.remove('unactive-form');
+        login.classList.add('unactive-form');
+      }
+    }
+  </script>
+</body>
+
+</html>

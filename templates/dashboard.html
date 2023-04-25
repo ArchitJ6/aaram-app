@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard</title>
+    <link rel="stylesheet" href="../static/css/dashboard_v2.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer=""
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="primary-navigation">
+      <div class="left-nav">
+        <div class="logo">
+          <img src="../static/images/logo.png" alt="logo" />
+        </div>
+      </div>
+      <div class="right-nav">
+        <div class="user-name hover-underline-animation">{{username}}</div>
+        <div class="user-profile">U</div>
+      </div>
+
+      <div class="secondary-navigation-cluster">
+        <button class="nav-btn" id="home-href">home</button>
+        <button class="nav-btn" id="chat-href">chat</button>
+        <button class="nav-btn" id="reels-href">reels</button>
+        <button class="nav-btn" id="consultancy-href">consultancy</button>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <div class="daily-feed-section">
+        <h1 class="feed-section-heading">daily feed</h1>
+
+        <div class="feed-container">
+          <div class="feed-header">
+            <div class="sender-pfp">A</div>
+            <div class="sender-name">Anny</div>
+            <div class="personality-type">(INTP)</div>
+          </div>
+          <div class="feed-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+            iusto debitis, velit illo itaque tempore architecto perspiciatis,
+            eius veniam, eos sed aliquid. Asperiores libero nihil,
+            necessitatibus, aspernatur dolorem nobis quae ab esse neque in sint
+            veritatis ipsam quidem optio alias corporis. Facilis, aut. Facere
+            quis deserunt harum suscipit in.
+          </div>
+          <div class="like-it-not">
+            <p>Do you relate with this?</p>
+            <button class="can-relate">Yes</button>
+            <button class="can-not-relate">No</button>
+          </div>
+        </div>
+
+        <div class="feed-container">
+          <div class="feed-header">
+            <div class="sender-pfp">J</div>
+            <div class="sender-name">John</div>
+            <div class="personality-type">(ISTP)</div>
+          </div>
+          <div class="feed-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+            iusto debitis, velit illo itaque tempore architecto perspiciatis,
+            eius veniam, eos sed aliquid. Asperiores libero nihil,
+            necessitatibus, aspernatur dolorem nobis quae ab esse neque in sint
+            veritatis ipsam quidem optio alias corporis. Facilis, aut. Facere
+            quis deserunt harum suscipit in.
+          </div>
+          <div class="like-it-not">
+            <p>Do you relate with this?</p>
+            <button class="can-relate">Yes</button>
+            <button class="can-not-relate">No</button>
+          </div>
+        </div>
+
+        <div class="feed-container">
+          <div class="feed-header">
+            <div class="sender-pfp">C</div>
+            <div class="sender-name">Charlie</div>
+            <div class="personality-type">(ISTP)</div>
+          </div>
+          <div class="feed-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+            iusto debitis, velit illo itaque tempore architecto perspiciatis,
+            eius veniam, eos sed aliquid. Asperiores libero nihil,
+            necessitatibus, aspernatur dolorem nobis quae ab esse neque in sint
+            veritatis ipsam quidem optio alias corporis. Facilis, aut. Facere
+            quis deserunt harum suscipit in.
+          </div>
+          <div class="like-it-not">
+            <p>Do you relate with this?</p>
+            <button class="can-relate">Yes</button>
+            <button class="can-not-relate">No</button>
+          </div>
+        </div>
+
+        <div class="feed-container">
+          <div class="feed-header">
+            <div class="sender-pfp">J</div>
+            <div class="sender-name">Julie</div>
+            <div class="personality-type">(ISTP)</div>
+          </div>
+          <div class="feed-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+            iusto debitis, velit illo itaque tempore architecto perspiciatis,
+            eius veniam, eos sed aliquid. Asperiores libero nihil,
+            necessitatibus, aspernatur dolorem nobis quae ab esse neque in sint
+            veritatis ipsam quidem optio alias corporis. Facilis, aut. Facere
+            quis deserunt harum suscipit in.
+          </div>
+          <div class="like-it-not">
+            <p>Do you relate with this?</p>
+            <button class="can-relate">Yes</button>
+            <button class="can-not-relate">No</button>
+          </div>
+        </div>
+
+        <div class="feed-container">
+          <div class="feed-header">
+            <div class="sender-pfp">M</div>
+            <div class="sender-name">Mayra</div>
+            <div class="personality-type">(ISTP)</div>
+          </div>
+          <div class="feed-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+            iusto debitis, velit illo itaque tempore architecto perspiciatis,
+            eius veniam, eos sed aliquid. Asperiores libero nihil,
+            necessitatibus, aspernatur dolorem nobis quae ab esse neque in sint
+            veritatis ipsam quidem optio alias corporis. Facilis, aut. Facere
+            quis deserunt harum suscipit in.
+          </div>
+          <div class="like-it-not">
+            <p>Do you relate with this?</p>
+            <button class="can-relate">Yes</button>
+            <button class="can-not-relate">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondary-navigation">
+      <input
+        type="text"
+        name="feed-input"
+        id="feed-input"
+        placeholder="How are you today?"
+      />
+      <button class="send-feed-message" id="send-feed-message">share</button>
+    </div>
+    <div class="hidden-data" style="position:absolute; top: 0; left: 0; display: block;">
+        <div id="username">{{username}}</div>
+        <div id="type">{{ptype}}</div>
+    </div>
+  </body>
+  <script src="../static/navbar.js"></script>
+  <script src="../static/dashboard.js"></script>
+</html>
